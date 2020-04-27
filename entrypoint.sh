@@ -17,6 +17,6 @@ fi
 while :
 do
 	echo "Sleeping for $RENEW_INTERVAL before renewing"
-	sleep 12h
+	sleep $RENEW_INTERVAL
 	certbot renew --manual --preferred-challenges=dns --manual-auth-hook=/app/auth-hook.sh
 done
