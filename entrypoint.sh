@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Get a list of existing certificates and look for $DOMAIN_NAME
-CERTIFICATES=`certbot certificates | grep $DOMAIN_NAME`
+CERTIFICATES=`certbot certificates | grep "$DOMAIN_NAME"`
 
 # Default renew interval to 12 hours
 : ${RENEW_INTERVAL="12h"}
