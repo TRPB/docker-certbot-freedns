@@ -1,5 +1,9 @@
 #!/bin/sh
 
+: ${INITIAL_DELAY=0}
+
+sleep $INITIAL_DELAY
+
 # Get a list of existing certificates and look for $DOMAIN_NAME
 CERTIFICATES=`certbot certificates | grep "$DOMAIN_NAME"`
 
